@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'nestjs-app'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['nestapp:3030']  # Replace 'nestjs-app' with your app service name or host
